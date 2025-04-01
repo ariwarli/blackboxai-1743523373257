@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TabFlow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-top">
+                <button class="nav-item active" data-view="tabs">
+                    <i class="fas fa-layer-group"></i>
+                    <span class="tooltip">All Tabs</span>
+                </button>
+                <button class="nav-item" data-view="groups">
+                    <i class="fas fa-folder"></i>
+                    <span class="tooltip">Tab Groups</span>
+                </button>
+                <button class="nav-item" data-view="sessions">
+                    <i class="fas fa-bookmark"></i>
+                    <span class="tooltip">Saved Sessions</span>
+                </button>
+            </div>
+            <div class="sidebar-bottom">
+                <button class="nav-item" data-view="settings">
+                    <i class="fas fa-cog"></i>
+                    <span class="tooltip">Settings</span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Search Bar -->
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Search tabs..." class="search-input">
+            </div>
+
+            <!-- Tab View -->
+            <div class="tab-container" id="tabGrid">
+                <!-- Tab cards will be dynamically inserted here -->
+            </div>
+
+            <!-- Preview Popup -->
+            <div class="preview-popup" id="previewPopup">
+                <img id="previewImage" src="" alt="Tab Preview">
+            </div>
+        </main>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
