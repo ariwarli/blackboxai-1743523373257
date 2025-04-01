@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TabFlow Settings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-stream"></i> TabFlow Settings</h1>
+            <p>Customize your tab management experience</p>
+        </header>
+
+        <main>
+            <section class="settings-section">
+                <h2>Appearance</h2>
+                <div class="setting-group">
+                    <label>
+                        Theme
+                        <select id="themeSelect">
+                            <option value="system">System Default</option>
+                            <option value="light">Light</option>
+                            <option value="dark">Dark</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="setting-group">
+                    <label>
+                        Dynamic Background
+                        <select id="backgroundSelect">
+                            <option value="none">None</option>
+                            <option value="morning">Morning</option>
+                            <option value="afternoon">Afternoon</option>
+                            <option value="night">Night</option>
+                        </select>
+                    </label>
+                </div>
+            </section>
+
+            <section class="settings-section">
+                <h2>Tab Management</h2>
+                <div class="setting-group">
+                    <label class="toggle-label">
+                        <span>Show Tab Timers</span>
+                        <div class="toggle">
+                            <input type="checkbox" id="showTimers">
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="setting-group">
+                    <label class="toggle-label">
+                        <span>Enable Tab Preview</span>
+                        <div class="toggle">
+                            <input type="checkbox" id="enablePreview">
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="setting-group">
+                    <label>
+                        Tab Layout
+                        <select id="layoutSelect">
+                            <option value="grid">Grid</option>
+                            <option value="list">List</option>
+                        </select>
+                    </label>
+                </div>
+            </section>
+
+            <section class="settings-section">
+                <h2>Sync & Backup</h2>
+                <div class="setting-group">
+                    <label class="toggle-label">
+                        <span>Enable Cloud Sync</span>
+                        <div class="toggle">
+                            <input type="checkbox" id="enableSync">
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="setting-group">
+                    <button id="exportData" class="btn">
+                        <i class="fas fa-download"></i> Export Settings
+                    </button>
+                    <button id="importData" class="btn">
+                        <i class="fas fa-upload"></i> Import Settings
+                    </button>
+                </div>
+            </section>
+
+            <section class="settings-section">
+                <h2>Keyboard Shortcuts</h2>
+                <div class="shortcut-group">
+                    <div class="shortcut-item">
+                        <span>Quick Search</span>
+                        <div class="shortcut-keys">
+                            <kbd>Ctrl</kbd> + <kbd>Space</kbd>
+                        </div>
+                    </div>
+                    <div class="shortcut-item">
+                        <span>Switch Tab Group</span>
+                        <div class="shortcut-keys">
+                            <kbd>Ctrl</kbd> + <kbd>G</kbd>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="save-section">
+                <button id="saveSettings" class="btn primary">
+                    <i class="fas fa-save"></i> Save Changes
+                </button>
+                <button id="resetSettings" class="btn secondary">
+                    <i class="fas fa-undo"></i> Reset to Default
+                </button>
+            </div>
+        </footer>
+    </div>
+    <script src="options.js"></script>
+</body>
+</html>
